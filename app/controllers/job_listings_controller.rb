@@ -6,7 +6,7 @@ class JobListingsController < ApplicationController
 
     def show
         job_listing = JobListing.find(params[:id])
-        render json: job
+        render json: job_listing
     end
 
     def create

@@ -5,8 +5,8 @@ class AppsController < ApplicationController
     end
 
     def show
-        application = Applciation.find(params[:id])
-        render json: application
+        app = App.find(params[:id])
+        render json: app
     end
 
     def create
