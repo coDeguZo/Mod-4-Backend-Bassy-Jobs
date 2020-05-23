@@ -20,6 +20,17 @@ class UsersController < ApplicationController
     #     render json: user
     # end
 
+    def update
+        user = User.find(params[:id])
+        user.update_attributes(user_params)
+        render json: user
+    end
+    # def update
+    #     @article = Article.find(params[:id])
+    #     @article.update(title: params[:article][:title], description: params[:article][:description])
+    #     redirect_to article_path(@article)
+    #   end
+
     private
 
     def user_params
