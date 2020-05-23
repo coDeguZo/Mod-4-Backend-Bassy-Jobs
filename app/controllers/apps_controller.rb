@@ -6,7 +6,7 @@ class AppsController < ApplicationController
 
     def show
         app = App.find(params[:id])
-        render json: app
+        render json: app, :include => [:user, :job_listing]
     end
 
     def create
