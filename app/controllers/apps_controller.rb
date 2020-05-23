@@ -14,11 +14,11 @@ class AppsController < ApplicationController
         render json: app
     end
 
-    # def destroy
-    #     app = App.find_by(id: params[:id])
-    #     app.destroy
-    #     render json: app
-    # end
+    def destroy
+        app = App.find_by(id: params[:id])
+        app.destroy
+        render json: app
+    end
 
     private
 
