@@ -23,7 +23,7 @@ company4 = Company.create(name: "Verizon", email: "verizon@hotmail.com")
 
 
 job_listing1 = JobListing.create(name: "Accountant", details: "placeholder text", salary: 80000, education_level: "Ph.D", experience_level: "Senior", status: "Open", company_id: company1.id)
-job_listing2 = JobListing.create(name: "TelePrompter", details: "placeholder text", salary: 100000, education_level: "Masters in Telecommunications or Equivalent Experience", experience_level: "Mid", status: "Open", company_id: company4.id)
+job_listing2 = JobListing.create(name: "TelePrompter", details: "placeholder text", salary: 100000, education_level: "Master's in Telecommunications or Equivalent Experience", experience_level: "Mid", status: "Open", company_id: company4.id)
 job_listing3 = JobListing.create(name: "Web Developer", details: "placeholder text", salary: 100000, education_level: "Bachelor's in computer science or related field preferred", status: "Closed", experience_level: "Mid", company_id: company2.id)
 job_listing4 = JobListing.create(name: "Software Engineer", details: "placeholder text", salary: 90000, education_level: "Bachelor's in computer science or related field preferred", status: "Open", experience_level: "Junior", company_id: company3.id)
 job_listing5 = JobListing.create(name: "Mechanical Engineer", details: "placeholder text", salary: 150000, education_level: "Bachelor's in Mechanical science or related field preferred", status: "Open", experience_level: "Senior", company_id: company4.id)
