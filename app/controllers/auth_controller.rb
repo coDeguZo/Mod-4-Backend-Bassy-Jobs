@@ -43,4 +43,9 @@ class AuthController < ApplicationController
     # end
   end
 
+  def company_create
+    company = Company.find_by(email: params[:email])
+    render json: company
+  end
+
 end

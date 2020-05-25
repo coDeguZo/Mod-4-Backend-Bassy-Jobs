@@ -11,16 +11,15 @@ Company.destroy_all
 App.destroy_all
 JobListing.destroy_all
 
-user1 = User.create(name: "Uzoma Airguzo", email: "uzoma@gmail.com", phone_number: "301-999-9090", address: "1234 Hollywood Lane", password: "one" )
-user2 = User.create(name: "Sebastian Dornel", email: "bassy@gmail.com", phone_number: "301-809-2033", address: "5678 Pokemon Terrace", password: "two")
-user3 = User.create(name: "Olivia Carter", email: "olivia@gmail.com", phone_number: "814-983-2303", address: "9012 Peach Tree Lane", password: "three")
-user4 = User.create(name: "Steward Griffen", email: "steward@gmail.com", phone_number: "828-344-9087", address: "3456 Harry Blvd", password: "four")
+user1 = User.create(name: "Uzoma Airguzo", email: "uzoma@gmail.com", phone_number: "301-999-9090", address: "1234 Hollywood Lane")
+user2 = User.create(name: "Sebastian Dornel", email: "bassy@gmail.com", phone_number: "301-809-2033", address: "5678 Pokemon Terrace")
+user3 = User.create(name: "Olivia Carter", email: "olivia@gmail.com", phone_number: "814-983-2303", address: "9012 Peach Tree Lane")
+user4 = User.create(name: "Steward Griffen", email: "steward@gmail.com", phone_number: "828-344-9087", address: "3456 Harry Blvd")
 
 company1 = Company.create(name: "Capitol One", email: "capitolone@hotmail.com")
 company2 = Company.create(name: "Whole Foods", email: "wholefoods@hotmail.com")
 company3 = Company.create(name: "Suntrust", email: "suntrust@hotmail.com")
 company4 = Company.create(name: "Verizon", email: "verizon@hotmail.com")
-
 
 job_listing1 = JobListing.create(name: "Accountant", details: "placeholder text", salary: 80000, education_level: "Doctoral Degree", experience_level: "Senior", status: "Open", company_id: company1.id)
 job_listing2 = JobListing.create(name: "TelePrompter", details: "placeholder text", salary: 100000, education_level: "Master's Degree", experience_level: "Mid", status: "Open", company_id: company4.id)
