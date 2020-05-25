@@ -22,25 +22,25 @@
 #     end
 #   end
 
-# class Api::V1::AuthController < ApplicationController
-class AuthController < ApplicationController
+class Api::V1::AuthController < ApplicationController
+# class AuthController < ApplicationController
 
   def create
-    user = User.find_by(email: params[:email])
-    render json: user
-
     # user = User.find_by(email: params[:email])
-    # # byebug
-    # if(user && user.authenticate(params[:password]))
-    #   byebug
-    #   render json: user
-    # else
-    #   #either the username wasn't found
-    #   #or the password was inccorect
-    #   render json: {
-    #     error_message: "Incorrect username or password"
-    #   }
-    # end
+    # render json: user
+
+    user = User.find_by(email: params[:email])
+    # byebug
+    if(user && user.authenticate(params[:password]))
+      byebug
+      render json: user
+    else
+      #either the username wasn't found
+      #or the password was inccorect
+      render json: {
+        error_message: "Incorrect username or password"
+      }
+    end
   end
 
 end

@@ -1,11 +1,11 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
 
     def index
         render json: User.all
     end
 
     def show
-        # byebug
+        byebug
         user = User.find(params[:id])
         render json: user
     end
