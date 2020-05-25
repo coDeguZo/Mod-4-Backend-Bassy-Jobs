@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_21_142934) do
+ActiveRecord::Schema.define(version: 2020_05_24_180521) do
 
   create_table "apps", force: :cascade do |t|
     t.datetime "application_date"
     t.integer "user_id"
     t.integer "job_listing_id"
-    t.string "status"
+    t.string "status", default: "pending"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_142934) do
     t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
+    t.string "avatar"
   end
 
 end
