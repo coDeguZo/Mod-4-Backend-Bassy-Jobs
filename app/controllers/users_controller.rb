@@ -5,15 +5,19 @@ class UsersController < ApplicationController
     end
 
     def show
-        # byebug
         user = User.find(params[:id])
         render json: user
     end
 
     def create
-        # byebug #add params[:password] back in later
-        user = User.create(name: params[:name], email: params[:email], phone_number: params[:phone_number], address: params[:address])
-        render json: user
+        # if user.valid?
+            user = User.create(user_params)
+            # user = User.create(name: params[:name], email: params[:email], phone_number: params[:phone_number], address: params[:address])
+            render json: user
+            # render json: { user: UserSerializer.new(user) }, status: :created
+        # else
+            # render json: { error: 'failed to create user because email has already been taken' }, status: :not_acceptable
+        # end
     end
 
     # def destroy
@@ -24,20 +28,15 @@ class UsersController < ApplicationController
 
     def update
         user = User.find(params[:id])
-        # user.update_attributes(user_params)
-        user.update(name: params[:name], email: params[:email], phone_number: params[:phone_number], address: params[:address])
+        user.update(user_params)
+        # user.update(name: params[:name], email: params[:email], phone_number: params[:phone_number], address: params[:address])
         render json: user # figure out why we can't use strong params
     end
-    # def update
-    #     @article = Article.find(params[:id])
-    #     @article.update(title: params[:article][:title], description: params[:article][:description])
-    #     redirect_to article_path(@article)
-    #   end
 
     private
 
     def user_params
-        params.require(user).permit(:name, :email, :phone_number, :address)
+        params.require(:user).permit(:name, :email, :phone_number, :address, :password)
     end
 end
 ############ ABOVE IS WHAT WE HAD BEFORE

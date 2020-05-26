@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_05_25_194225) do
   create_table "companies", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.boolean "is_employer", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_05_25_194225) do
     t.string "email"
     t.string "phone_number"
     t.string "address"
+    t.boolean "is_employer", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"

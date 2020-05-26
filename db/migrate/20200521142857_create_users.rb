@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :email
       t.string :phone_number
       t.string :address
+      t.boolean :is_employer, default: false
       t.timestamps
     end
   end
