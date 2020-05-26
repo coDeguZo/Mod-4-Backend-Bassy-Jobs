@@ -14,6 +14,12 @@ class JobListingsController < ApplicationController
         render json: job_listing
     end
 
+    def update
+        job_listing = JobListing.find(params[:id])
+        job_listing.update(job_listing_params)
+        render json: job_listing
+    end
+
     def destroy
         job_listing = JobListing.find_by(id: params[:id])
         job_listing.destroy
@@ -23,7 +29,7 @@ class JobListingsController < ApplicationController
     private
 
     def job_listing_params
-        params.require(job_listing).permit(:name, :details, :salary, :education_level, :experience_level, :status, :company_id)
+        params.require(:job_listing).permit(:name, :details, :salary, :education_level, :experience_level, :status, :company_id)
     end
 
 end

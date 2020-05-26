@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_05_25_194225) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.string "avatar"
+    t.string "resume"
   end
 
 end

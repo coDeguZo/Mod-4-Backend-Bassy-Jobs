@@ -27,12 +27,12 @@ class AuthController < ApplicationController
 
   def create
     user = User.find_by(email: params[:email])
-    # if(user)
+    if(user)
       render json: user
-    # else
-    #   render json: {
-    #     error_message: "Incorrect username or password"
-    #   }
+    else
+      render json: {
+        error_message: "Incorrect username or password"
+      }
     # end
     # user = User.find_by(email: params[:email])
     # # byebug
@@ -45,18 +45,18 @@ class AuthController < ApplicationController
     #   render json: {
     #     error_message: "Incorrect username or password"
     #   }
-    # end
+    end
   end
 
   def company_create
     company = Company.find_by(email: params[:email])
-    # if(company)
+    if(company)
       render json: company
-    # else
-    #   render json: {
-    #     error_message: "Incorrect username or password"
-    #   }
-    # end
+    else
+      render json: {
+        error_message: "Incorrect username or password"
+      }
+    end
   end
 
 end

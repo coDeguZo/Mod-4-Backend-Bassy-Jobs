@@ -20,6 +20,12 @@ class AppsController < ApplicationController
         render json: app
     end
 
+    def update
+        app = App.find(params[:id])
+        app.update(app_params)
+        render json: app
+    end
+
     private
 
     def app_params
