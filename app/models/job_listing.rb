@@ -1,5 +1,5 @@
 class JobListing < ApplicationRecord
     belongs_to :company
-    has_many :applications
-    has_many :users, through: :applications
+    has_many :apps
+    has_many :users, through: :apps
 end

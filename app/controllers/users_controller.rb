@@ -6,19 +6,20 @@ class UsersController < ApplicationController
 
     def show
         user = User.find(params[:id])
-        render json: user
+        render json: user.as_json( include: [:apps, :job_listings] )
     end
 
     def create
+        # user = User.create(user_params)
+        user = User.create(user_params)
+        # byebug
         # if user.valid?
-            user = User.create(user_params)
-            # user = User.create(name: params[:name], email: params[:email], phone_number: params[:phone_number], address: params[:address])
-            render json: user
-            # render json: { user: UserSerializer.new(user) }, status: :created
+        #   render json: { user: :user }, status: :created
+        render json: user
         # else
-            # render json: { error: 'failed to create user because email has already been taken' }, status: :not_acceptable
+        #   render json: { error: 'failed to create user' }, status: :not_acceptable
         # end
-    end
+      end
 
     # def destroy
     #     user = User.find(params[:id])
@@ -26,10 +27,17 @@ class UsersController < ApplicationController
     #     render json: user
     # end
 
+    def token_authentication
+        token = request.headers["Authenticate"]
+        user = User.find(decode(token)["user_id"])
+        render json: user #send back an error
+    end
+    
+
     def update
         user = User.find(params[:id])
-        user.update(user_params)
-        # user.update(name: params[:name], email: params[:email], phone_number: params[:phone_number], address: params[:address])
+        user.update(name: params[:name], email: params[:email], password: params[:password], phone_number: params[:phone_number], address: params[:address])
+        # user.update(user_params)
         render json: user # figure out why we can't use strong params
     end
 
@@ -38,7 +46,10 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:name, :email, :phone_number, :address, :password, :resume)
     end
+    
 end
+
+
 ############ ABOVE IS WHAT WE HAD BEFORE
 # class Api::V1::UsersController < ApplicationController
 # class UsersController < ApplicationController

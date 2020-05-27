@@ -6,7 +6,7 @@ class JobListingsController < ApplicationController
 
     def show
         job_listing = JobListing.find(params[:id])
-        render json: job_listing
+        render json: job_listing.as_json(include: [:company])
     end
 
     def create
