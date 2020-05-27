@@ -29,7 +29,8 @@ class JobListingsController < ApplicationController
     private
 
     def job_listing_params
-        params.require(:job_listing).permit(:name, :details, :salary, :education_level, :experience_level, :status, :company_id)
+        # params.require(:job_listing).permit(:name, :details, :salary, :education_level, :experience_level, :status, :company_id)
+        params.require(:job_listing).permit(:name, :details, :salary, :education_level, :experience_level, :company_id)
     end
 
 end
