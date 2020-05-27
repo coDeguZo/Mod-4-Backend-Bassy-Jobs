@@ -16,6 +16,7 @@ class AppsController < ApplicationController
 
     def destroy
         app = App.find_by(id: params[:id])
+        # byebug
         app.destroy
         render json: app
     end

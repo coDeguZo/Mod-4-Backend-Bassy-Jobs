@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
     def index
-        render json: User.all
+        render json: User.all.as_json(include: [:apps, :job_listings])
     end
 
     def show
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
     def update
         user = User.find(params[:id])
-        user.update(name: params[:name], email: params[:email], password: params[:password], phone_number: params[:phone_number], address: params[:address])
+        user.update(name: params[:name], resume: params[:resume], email: params[:email], phone_number: params[:phone_number], address: params[:address])
         # user.update(user_params)
         render json: user # figure out why we can't use strong params
     end

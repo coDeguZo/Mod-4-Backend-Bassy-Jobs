@@ -45,7 +45,7 @@ job_listing10 = JobListing.create(name: "Software Engineer III", details: "place
 
 
 
-app1 = App.create(application_date: "2020-01-01 12:00:00", user_id: user1.id, status: "accepted", job_listing_id: job_listing1.id)
+app1 = App.create(application_date: "2020-01-01 12:00:00", user_id: user1.id, status: "accepted", job_listing_id: job_listing1.id)#, job_listing_name: job_listing1.name)
 app2 = App.create(application_date: "2020-01-02 12:00:00", user_id: user2.id, status: "declined", job_listing_id: job_listing2.id)
 app3 = App.create(application_date: "2020-01-03 12:00:00", user_id: user3.id, status: "pending", job_listing_id: job_listing3.id)
 app4 = App.create(application_date: "2020-01-04 12:00:00", user_id: user4.id, status: "pending", job_listing_id: job_listing4.id)

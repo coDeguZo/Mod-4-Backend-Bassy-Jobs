@@ -19,7 +19,7 @@ class CompaniesController < ApplicationController
         # user = User.create(name: params[:name], email: params[:email], phone_number: params[:phone_number], address: params[:address])
     def update
         company = Company.find(params[:id])
-        company.update(name: params[:name], email: params[:email], password: params[:password])
+        company.update(name: params[:name], email: params[:email])
         render json: company 
     end
 
