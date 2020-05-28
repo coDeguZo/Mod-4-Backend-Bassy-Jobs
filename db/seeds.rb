@@ -17,7 +17,7 @@ Boston, MA 54223
 
 (212) 204-5645
 
-james.doe@gmail.com | github.com/jamesdoe
+uzoma@gmail.com | github.com/codeGuzo
 
 Lead Software Engineer with 9+ years of work experience guiding developer teams including coding, testing, and integration. Seeking to leverage proven achievements, working knowledge of Agile methodology, and experience implementing service-oriented (SOA) architectures and web services into the open role at your company. Possess a BS in Computer Science.
 
