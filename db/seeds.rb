@@ -57,7 +57,51 @@ CERTIFICATIONS
 
 Microsoft Certified System Administrator, 2014
 Novell Certified Engineer, 2012 text", password: "one")
-user2 = User.create(name: "Sebastian Dornel", email: "bassy@gmail.com", phone_number: "301-809-2033", address: "5678 Pokemon Terrace", resume: "placeholder text", password: "two")
+user2 = User.create(name: "Sebastian Dornel", email: "bassy@gmail.com", phone_number: "301-809-2033", address: "5678 Pokemon Terrace", resume: "Bassy
+555 Main Street
+Sacramento, CA 98765
+(123) 456-7890
+bassy@email.com
+
+SENIOR SOFTWARE ENGINEER
+
+Thinking “out of the box” to provide software-based solutions
+
+Strong in design and integration problem-solving skills. Expert in Java, C#, .NET, and T-SQL with database analysis and design. Skilled in developing business plans, requirements specifications, user documentation, and architectural systems research. Strong written and verbal communications.
+
+Software skills include:
+
+Databases: MySQL, Oracle, Access, SAP
+Software: Microsoft Office, Remedy, Microsoft SQL Server, DB Artisan, Eclipse, Visual Studio.NET, FrontPage
+Languages: C#, Java, Visual Basic, ASP, XML, XSL, JWS, SQL, and T-SQL
+PROFESSIONAL EXPERIENCE
+
+E*TRADE FINANCIAL, Sacramento, Calif.
+SOFTWARE ENGINEER (July 2002—Present)
+
+Main responsibilities include customer service systems.
+
+Notable accomplishments:
+
+Re-engineered customer account software systems used by brokerage teams.
+Developed and implemented new feedback system for users’ concerns, bugs, and defect tracking regarding use and functionality of new interfaces.
+Collaborated in the in-house development of new banking software interfaces.
+INTEL CORPORATION, Folsom, Calif.
+SYSTEMS PROGRAMMER (January 2000—July 2002)
+
+Focused on remote servers and SSL product analysis.
+
+Notable Accomplishments:
+
+Deployed and tested Remote Installation Services(RIS)-Server Installs on Windows XP.
+Focused deployment of Server builds and handled some client builds.
+EDUCATION & CREDENTIALS
+
+CALIFORNIA STATE UNIVERSITY, Chico, Calif.
+Bachelor of Science in Computer Science and Business, 2000
+
+COLLEGE OF THE SISKIYOUS, Weed, Calif.
+Associate of Science in Computer Science, 1998", password: "two")
 user3 = User.create(name: "Olivia Carter", email: "olivia@gmail.com", phone_number: "814-983-2303", address: "9012 Peach Tree Lane", resume: "placeholder text", password: "three")
 user4 = User.create(name: "Steward Griffen", email: "steward@gmail.com", phone_number: "828-344-9087", address: "3456 Harry Blvd", resume: "placeholder text", password: "four")
 
